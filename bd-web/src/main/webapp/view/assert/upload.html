@@ -1,0 +1,38 @@
+<html>
+<head>
+	<link href="../../css/uploadfile.css" rel="stylesheet">
+	<script src="../../plugins/jQuery/jquery-1.8.2.min.js"></script>
+	<script src="../../plugins/jQuery/jquery.common.tools.js"></script>
+	<script src="../../plugins/jQuery/jquery.uploadfile.min.js"></script>
+	<script src="../../js/glo_info.js"></script>
+
+</head>
+<body>
+<div id="fileuploader">Upload</div>
+<button type="button" id="uploadFileBtn" onclick="uploadFile()"><span>上传</span></button>
+<script>
+alert(webPathName);
+$("#fileuploader").uploadFile({
+	url:webPathName + "/ocr/save.do",
+	type : "POST",
+	fileName:"myfile",
+	acceptFiles:"image/*",
+	formData: {"name":"Ravi","age":31},
+	returnType:"json",
+	onLoad:function(obj) {
+		alert("onload")
+	},
+	onSuccess:function(files,data,xhr,pd){
+		alert("onSuccess" + data.desc)
+	},
+	onError: function(files,status,errMsg,pd) {
+		alert("onError" + status + "-" + errMsg)
+	},
+	onSubmit:function(files) {
+		alert("onSubmit");
+	}
+});
+</script>
+</body>
+</html>
+

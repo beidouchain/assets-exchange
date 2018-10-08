@@ -1,0 +1,14 @@
+com/beidou/exchange/demo/entity/Test.class
+com/beidou/exchange/filter/ProcessInterceptor.class
+com/beidou/exchange/demo/controller/DemoController.class
+com/beidou/exchange/rpc/WalletUtil.class
+com/beidou/exchange/ocr/controller/OcrController.class
+com/beidou/exchange/service/TestService.class
+com/beidou/exchange/user/controller/UserAction.class
+com/beidou/exchange/demo/mapper/TestMapper.class
+com/beidou/exchange/demo/DemoApplication.class
+com/beidou/test/RedisTest.class
+com/beidou/exchange/service/impl/TestServiceImpl.class
+com/beidou/exchange/filter/BDCSessionFilter.class
+com/beidou/test/Test.class
+com/beidou/exchange/filter/ClassCorsConfig.class

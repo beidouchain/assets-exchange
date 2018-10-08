@@ -1,0 +1,199 @@
+
+
+body{
+		margin: 0;
+		padding:0;
+	}	
+
+	.container{
+		font-family: 微软雅黑;
+	/*	background: #fff;*/
+		width: 1320px;
+	/*	padding: 30px;*/
+		margin:0px auto;
+        overflow: hidden;
+        color: #fff;
+	}
+
+	.container .menu{
+		width: 300px;
+		margin-right:20px;
+		float: left;
+		background: rgba(39,54,99,0.46);
+		margin-top: 20px;
+		
+	}
+/*position 菜单背景图标*/
+	.positionIicon{
+		display: inline block;
+		width: 32px;
+		height: 32px;
+		margin: 0px 4px;
+		float: left;
+		margin-right: 10px;
+		margin-top: 15px;
+		background-color: #fff;
+	}
+/*menu图标*/
+	.q-menu-img{
+		background: url("../img/zican.png");
+		background-size: 100% 100%;
+	}
+	
+	.q-menu-doit{
+		background: url("../img/zican.png");
+		background-size: 100% 100%;
+	}
+
+	.q-menu-three{
+		background: url("../img/zican.png");
+		background-size: 100% 100%;
+	}
+
+
+	.container .menu h3{
+		font-size: 20px;
+		cursor: pointer;
+	}
+    .container .menu ul{
+        display: none;
+    }
+	.container .menu ul li{
+		height: 60px;
+		line-height: 60px;
+	}
+
+	.container .menu ul li a:hover{
+		/*background: #9FB6CD;
+		border-radius: 14px;
+		-webkit-border-radius: 14px;
+		-moz-border-radius: 14px;
+		-moz-border-radius:14px;*/
+		color:#4d98ff;
+	
+	}
+
+	ul{
+		list-style: none;
+	}
+
+	.ulmenu1 li a{
+		text-decoration: none;
+		color: #fff;
+		/*//color: #000;*/
+		font-size: 14px;
+		display: block;
+		width: 180px;
+		height: 60px;
+		padding-left: 46px;
+	}
+	.ulmenu2 li a{
+		text-decoration: none;
+		color: #fff;
+		/*//color: #000;*/
+		font-size: 14px;
+		display: block;
+		width: 180px;
+		height: 60px;
+		padding-left: 46px;
+	}
+
+	.container .menu .selected{
+		/*background: #ccc;
+		border-radius: 14px;*/
+	}
+
+
+
+	.container .content{
+		margin-top: 20px;
+		width: 1000px;
+		float: left;
+	}
+
+	.container .content .get-menu{
+		margin-left: 0px;
+		background:rgba(39,54,99,0.8);
+	}
+
+	.container .content .get-menu a{
+		display: inline-block;
+		font-size: 15px;
+	    height: 40px;
+	}
+
+	.container .content .get-menu a:last-child{
+		margin-left: -8px;
+		color: #7D9EC0;
+	}
+
+	.container .content .get-menu span{
+		display: inline-block;
+	    height: 50px;
+	    line-height: 50px;
+	    margin-left: 20px;
+	    font-size: 14px;
+	}
+
+	.container .content .menu1 .tab {
+		display: none;
+	}
+
+	.container .content .menu1 .active{
+		display: block;
+	}
+
+	.container .content .menu1 .tab p{
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(255,255,255,1);
+        word-break:break-all;
+	}
+
+	.container .content .menu1 .tab .tt{
+		font-size: 14px;
+		font-weight: bold;
+
+	}
+/*第二个菜单下的文档内容*/
+	.container .content .menu2 .tab {
+		display: none;
+	}
+
+	.container .content .menu2 .active{
+		display: block;
+	}
+
+	.container .content .menu2 .tab p{
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(255,255,255,1);
+        word-break:break-all;
+	}
+
+	.container .content .menu2 .tab .tt{
+		font-size: 14px;
+		font-weight: bold;
+
+	}
+/*第三个菜单下的文档内容*/
+	.container .content .menu3 .tab {
+		display: none;
+	}
+
+	.container .content .menu3 .active{
+		display: block;
+	}
+
+	.container .content .menu3 .tab p{
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(0,0,0,0.8);
+        word-break:break-all;
+	}
+
+	.container .content .menu3 .tab .tt{
+		font-size: 13px;
+		font-weight: bold;
+
+	}

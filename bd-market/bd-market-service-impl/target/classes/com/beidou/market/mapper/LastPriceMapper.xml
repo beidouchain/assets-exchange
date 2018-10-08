@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.beidou.market.mapper.LastPriceMapper" >
+  <resultMap id="BaseResultMap" type="com.beidou.market.entity.LastPrice" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="ASSET1" property="asset1" jdbcType="VARCHAR" />
+    <result column="ASSET2" property="asset2" jdbcType="VARCHAR" />
+    <result column="PRICE" property="price" jdbcType="DECIMAL" />
+    <result column="REVERSE_PRICE" property="reversePrice" jdbcType="DECIMAL" />
+    <result column="DATE_TIME" property="dateTime" jdbcType="BIGINT" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="BIGINT" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>

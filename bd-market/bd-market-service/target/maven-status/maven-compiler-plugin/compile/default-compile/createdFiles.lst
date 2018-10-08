@@ -1,0 +1,9 @@
+com/beidou/market/entity/ResponseCoinPriceVO.class
+com/beidou/market/entity/AssetCategory.class
+com/beidou/market/entity/LastExchange.class
+com/beidou/market/entity/ExchangeHistory.class
+com/beidou/market/service/MarketService.class
+com/beidou/market/service/LastPriceService.class
+com/beidou/market/entity/MarketCategoryStateVO.class
+com/beidou/market/entity/LastPrice.class
+com/beidou/market/service/DbAssetsService.class

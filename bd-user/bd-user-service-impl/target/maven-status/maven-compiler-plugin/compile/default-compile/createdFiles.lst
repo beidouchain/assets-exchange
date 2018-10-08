@@ -1,0 +1,3 @@
+com/beidou/user/mapper/UserPromotionMapper.class
+com/beidou/user/controller/UserPromotionController.class
+com/beidou/user/service/impl/UserPromotionServiceImpl.class

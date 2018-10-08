@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>北斗交易所</title>
+    <meta name="description" content="北斗交易所是一个区块链数字资产交易平台 ">
+    <meta name="keywords" content="北斗交易所">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<link href="../../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../../css/coins_16.css" rel="stylesheet" type="text/css">
+	<link href="../../css/coins_32.css" rel="stylesheet" type="text/css">
+	<link href="../../css/coins_48.css" rel="stylesheet" type="text/css">
+    <link href="../../css/bd_dark.css" rel="stylesheet" type="text/css" id="darkStyle">
+    <link href="../../css/usercenter.css" rel="stylesheet" type="text/css">
+
+    <script src="../../plugins/jQuery/jquery-1.8.2.min.js"></script>
+    <script src="../../plugins/jQuery/jquery.common.tools.js"></script>
+    <script src="../../js/glo_info.js"></script>
+</head>
+<body class="dark-body">
+<div class="header clearfix"> <!-- header start -->
+    <div class="top-up">
+        <div class="top-con">
+            <ul class="login_lan">         
+                <li class="toplogin user-info-con">
+                    <div id="topLoginBar" style="color: rgb(255, 255, 255);">
+                        <span class="lv-con"><a class="tier-level" href="#" title="等级">&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                        <a id="nickName" href="#"><span id="showLoginName"></span><i class="caret"></i></a>
+                        <div class="tier-info" id="tierMenu" style="display: none; overflow: hidden; height: 283px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+                            <ul>
+                                <span class="uccaret umc"></span>
+                                <li>
+                                    <b>最近30天交易量：</b>
+                                    <p><strong>0.00000</strong> BTC 或
+                                        <strong>0.00</strong> CNY</p>
+                                </li>
+                                <li>
+                                    <b>账户总资产：</b>
+                                    <p><strong>0.00000</strong> BTC 或
+                                        <strong>0.00</strong> CNY</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="toplogin user-log-out"><a href="#">退出</a></li>
+            
+                <li class="lang-option">
+                    <span>中文版</span><i class="caret"></i>
+                    <div class="more-lan">
+                        <a href=#>English</a>
+                    </div>
+                </li>
+            </ul>
+            <ul id="theme">
+                <span>主题:</span>
+                <li id="dark" title="深色" class="cur-theme">深色</li>
+                <li id="light" title="浅色">浅色</li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-dn">
+        <div class="logo">
+            <a href="#" target="_top">
+                <img src="../../images/logo.jpg" alt="bdcore LOGO">
+            </a>
+        </div>
+
+        <ul class="gateio-nav">
+            <li class="">
+                <a href="#">首页</a>
+            </li>
+            <li class="">
+                <a href="#">交易</a>
+            </li>
+            <li class="nav-active">
+                <a href="#">我的资产</a>
+            </li>
+            <li class="">
+                <a href="#">安全设置</a>
+            </li>
+			<li class="">
+                <a href="#">公告</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">帮助<i class="caret"></i></a>
+                <ul class="second-nav clearfix">
+					<li>
+                        <a href="#">问题中心</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div id="top_last_rate" style="display: none"></div>
+    </div>
+</div>   <!-- header end -->
+
+     
+<div class="content">  <!-- main_content start -->
+<table class="leftbar" style="padding-top: 15px;"><!-- left_menu start -->
+    <tbody><tr>
+    <td style="border-bottom:0;" valign="top">
+		<div id="marketlist_wrapper" class="dataTables_wrapper" role="grid">
+		<table class="marketlist dataTable dark-tradelist" id="tradelist" cellspacing="0" cellpadding="0">   
+			<tbody role="alert" aria-live="polite" aria-relevant="all">
+			<tr>
+				<td class="no-wrap alignRight" style=" width:100%;border:none">
+				<div id="wrapper-250">
+					<ul class="accordion">
+						<li id="adn1" class="files"> <a href="#" class="">我的资产<span class="umicon"></span></a>
+						 <ul class="sub-menu" style="display: block;">
+							<li><a data-id="myfunds" href="#">帐户资金</a></li>
+							<li><a data-id="mypurselog" href="#">账单明细</a></li>
+						  </ul>
+						</li>
+						
+						<li id="adn2" class="cloud"> <a href="#" class="">交易记录<span class="umicon"></span></a>
+						 <ul class="sub-menu" style="display: block;">
+							<li><a data-id="myorders" href="#">我的挂单</a></li>
+							<li><a data-id="myhistory" href="#">成交记录</a></li>
+						  </ul>
+						</li>
+                        
+						<li id="adn4" class="sign"> <a href="#">安全设置<span class="umicon"></span></a>
+						  <ul class="sub-menu">
+                              <li><link rel="import" href="idauth.html" >身份认证</li>
+						      <li><a data-id="id_setup" href="#">身份认证</a></li>
+							  <li><a data-id="id_setup2" href="#">高级认证</a></li>
+							  <li><a data-id="sms_setup" href="#">手机绑定</a></li>
+							  <li><a data-id="resetpw" href="#">修改登录密码（自动登出）</a></li>
+							  <li><a data-id="resetfpw" href="#">修改资金密码（自动登出）</a></li>
+							  <li><a data-id="email_setup" href="#">邮箱绑定</a></li>
+						  </ul>
+						</li>  
+					</ul>
+				</div>
+				</td>
+			</tr>					  
+			</tbody>
+		</table>	
+		</div>
+	</td>
+	</tr>
+	</tbody>
+</table> <!-- left_menu end -->
+
+
+<script type="text/javascript">
+	$(function() {
+		$(".accordion").children("li").find("a").click(function () {
+			$(this).toggleClass("menu-hide").next("ul").toggle();
+			var lb = $(".leftbar"), mc = $(".main_content"), lh = lb.height(), mh = mc.height();
+			lb.css("height", mh)
+		});
+
+		var icoType='';
+		if(icoType==''){
+			$("#buyIco").parent("li").remove()
+		}
+		
+		$("input").focus(function(){
+			$(".failed").html("")
+		});
+
+		$(".files,.cloud,.mail").find("li").click(function () {
+			$.cookie('nav_index', 3,{ path: '/' });
+		});
+		$(".sign").find("li").click(function () {
+			$.cookie('nav_index', 4,{ path: '/' });
+		});
+
+		//左菜单active标识
+		var url=window.location.href,
+			pagename=url.split('nt/')[1];
+		$('a[data-id="'+pagename+'"]').addClass("mactive");
+		if(url.indexOf('?coin_withdraw') > -1 || url.indexOf('aw/') > -1){
+			$('a[data-id=withdraw_coin]').addClass("mactive");
+		} else if(url.indexOf('?coin_deposit') > -1 || url.indexOf('it/') > -1){
+			$('a[data-id=deposit_coin]').addClass("mactive");
+		}
+		if(url.indexOf('totp/') > -1){
+			$('a[data-id=totp]').addClass("mactive");
+		}
+
+	});
+</script>
+<div class="main_content acc-m-con"> <!-- right_content start -->
+			
+	<ul class="my-top-info clearfix">
+	<li>
+		<h3>我的账号ID</h3>
+		<b>1691107</b>
+	</li>
+	<li>
+		<h3><a href="#" title="资产">我的资产</a></h3>
+		<strong>123123</strong>
+	</li>
+	<li>
+		<h3>交易费折扣</h3>
+		<strong>无</strong>
+	</li>
+	<li>
+		<h3>近30天交易量</h3>
+		<strong>0.00000</strong><i class="vol30-unit"> BTC</i> <div class="fund-top-small">或 <strong>0.00</strong> CNY</div>
+	</li>
+</ul>
+
+<div id="crFund">当前资金总估：
+	<i class="red">0.00 人民币</i> 或 <i class="red">0.00 美元</i> 或 <i class="red">0.00000 比特币</i>
+	<p class="fund-tips">注：资金总估是由历史行情估算值，仅为用户提供一个参考，请以单项资金为准</p>
+</div>
+
+<div class="sectioncont funds-dtl myfunds-dtl">
+    <div class="m_title" id="wallet"> 资金(我的在线钱包):</div>
+    <div class="HideZeroDiv pull-left" id="hideZbtn">
+    	<label for="hidezero">
+            <input id="hidezero" name="hidezero" style="width: 20px;" type="checkbox">
+            <label for="hidezero" class="vr-btn"></label>
+            <span class="hidezero-span">只显示有资金币种（隐藏0资金币种）</span>
+        </label>
+        <input id="min" value="" type="hidden"><input id="max" value="" type="hidden">
+    </div>
+	<div id="defaultOrder" class="r-btn">默认排序</div>
+    <div id="funds_wrapper" class="dataTables_wrapper no-footer"><div class="top"><div id="funds_filter" class="dataTables_filter"><label><input class="" placeholder="" aria-controls="funds" type="search"></label></div></div><table id="funds" class="dataTable sf-grid all-funds-table initial-order no-footer" role="grid" aria-describedby="funds_info" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr role="row" style="height:40px"><th class="sorting_asc" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label="币种: activate to sort column ascending" align="right"><b>币种</b></th><th class="sorting" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label="可用余额: activate to sort column ascending" align="right"><b>可用余额</b></th><th class="sorting" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label="挂单金额: activate to sort column ascending" align="right"><b>挂单金额</b></th><th class="sorting" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label="总计: activate to sort column ascending" align="right"><b>总计</b></th><th class="sorting" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label="估算为人民币: activate to sort column ascending" aria-sort="descending" align="right"><b>估算为人民币</b></th><th class="sorting" tabindex="0" aria-controls="funds" rowspan="1" colspan="1" aria-label=": activate to sort column ascending"></th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="操作" align="right"><b>操作</b></th></tr>
+        </thead>
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+              <tr data-id="zero" role="row" class="odd">
+                  <td class="sorting_3" align="right"><span class="icon-16 icon-16-usdt"></span><span style="color:#08a287"><b>USDT</b> Tether</span></td>
+                  <td align="right">0.000000</td>
+                  <td class="no-od" align="right">0.000000</td>
+                  <td align="right">0.000000</td>
+                  <td class="sorting_1" align="right">0.00</td>
+			<td class="sorting_2">13</td>
+                  <td align="right">
+			<a href="#" class="normal-depo fund-deposit" title="充值正常">充值</a>
+			&nbsp;&nbsp; 
+			<a href="#" class="normal-depo fund-withdraw" title="提现正常">提现</a>
+			&nbsp;&nbsp; 
+			<a href="#" class="normal-depo fund-to-trade" title="交易正常">交易</a></td>
+              </tr>
+              <tr data-id="zero" role="row" class="even">
+                  <td class="sorting_3" align="right"><span class="icon-16 icon-16-usdt_eth"></span><span style="color:#000"><b>USDT_ETH</b> Tether(ERC20)</span></td>
+                  <td align="right">0.000000</td>
+                  <td class="no-od" align="right">0.000000</td>
+                  <td align="right">0.000000</td>
+                  <td class="sorting_1" align="right">0.00</td>
+			<td class="sorting_2">12</td>
+                  <td align="right">
+			<a href="#" class="normal-depo fund-deposit" title="充值正常">充值</a>
+			&nbsp;&nbsp; 
+			<a href="#" class="normal-depo fund-withdraw" title="提现正常">提现</a>
+			&nbsp;&nbsp; 
+			<a href="#" class="err-depo fund-to-trade" title="交易暂停">交易</a></td>
+              </tr>
+          </tbody>
+    </table><div class="bottom"><div class="dataTables_info" id="funds_info" role="status" aria-live="polite">当前显示第 1 至 12 币种，共 184 币种</div><div class="dataTables_paginate paging_simple_numbers" id="funds_paginate"><a class="paginate_button previous disabled" aria-controls="funds" data-dt-idx="0" tabindex="0" id="funds_previous">上页</a><span><a class="paginate_button current" aria-controls="funds" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="funds" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="funds" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="funds" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="funds" data-dt-idx="5" tabindex="0">5</a><span class="ellipsis">…</span><a class="paginate_button " aria-controls="funds" data-dt-idx="6" tabindex="0">16</a></span><a class="paginate_button next" aria-controls="funds" data-dt-idx="7" tabindex="0" id="funds_next">下页</a></div></div><div class="clear"></div></div>
+
+    <div class="m_title"> 最近充值记录（<a href="#">更多</a>）: </div>
+    <table class="sf-grid table-inacc table-inacc-head">
+		<thead>
+			<tr>
+				<th><b>单号</b></th>
+				<th align="left"><b>时间</b></th>
+				<th align="right"><b>金额</b></th>
+				<th align="right"><b>转账ID</b></th>
+				<th align="right"><b>确认个数</b></th>
+				<th align="right"><b>状态</b></th>
+			</tr>
+		</thead>
+	</table>
+	<div class="table-scroll">
+		<table class="sf-grid table-inacc table-inacc-body" id="latestDepo">
+			<tbody>
+							<tr class="table-empty" style="display: table-row;">
+					<td style="text-align: center"><p><i>i</i>暂无充值记录</p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="m_title"> 最近提现记录（<a href="#">更多</a>）: </div>
+    <table class="sf-grid table-inacc table-inacc-head">
+		<thead>
+			<tr>
+				<th><b>单号</b></th>
+				<th align="left"><b>时间</b></th>
+				<th align="right"><b>金额</b></th>
+				<th align="right"><b>提现地址/转账ID</b></th>
+				<th align="right"><b>状态</b></th>
+				<th align="right"><b>操作</b></th>
+			</tr>
+		</thead>
+	</table>
+	<div class="table-scroll">
+		<table class="sf-grid table-inacc table-inacc-body" id="latestWith">
+			<tbody>
+							<tr class="table-empty" style="display: table-row;">
+					<td style="text-align: center"><p><i>i</i>暂无提现记录</p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+    <br>
+</div>
+<br>
+<script>
+    $.fn.dataTable.ext.search.push( //推送有资金的区间给datatable
+            function( settings, data, dataIndex ) {
+                var min = parseFloat( $('#min').val());
+                var max = parseFloat( $('#max').val());
+                var acc = parseFloat( data[1] ) || 0; // 总金额列数据
+                if ( ( isNaN( min ) && isNaN( max ) ) ||
+                        ( isNaN( min ) && acc <= max ) ||
+                        ( min <= acc   && isNaN( max ) ) ||
+                        ( min <= acc   && acc <= max ) )
+                {
+                    return true;
+                }
+                return false;
+            }
+    );
+
+    $( function () {
+
+        var tableIndex=$('#funds').DataTable({
+            "dom": '<"top"f>rt<"bottom"ip><"clear">',
+            "pageLength": 12,
+            "autoWidth": false,
+            "language": {
+                "sProcessing": "处理中...",
+                "sZeroRecords": "没有匹配币种",
+                "sInfo": "当前显示第 _START_ 至 _END_ 币种，共 _TOTAL_ 币种",
+                "sInfoEmpty":"当前 0 币种匹配",
+                "sInfoFiltered": "( 从 _MAX_ 币种中过滤 )",
+                "sSearch": "",
+                "sEmptyTable": "暂无数据",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                }
+            },
+            "order": [
+                [4, null],[5, null],[0, 'asc']
+            ],//改第5列排序为默认
+            "columnDefs": [
+                { "orderable": false, "targets": [ 6 ] }
+            ]
+        }), orderTimes=0;
+
+		tableIndex.on('draw.dt',function() {
+			var lb=$(".leftbar"), mc=$(".main_content"),lh=lb.height(),mh=mc.height();
+			lb.css("height",mh);
+		}).on('order.dt', function() {
+			orderTimes++;
+			if(orderTimes > 1) {
+				$("#defaultOrder").show();
+				$("#funds").removeClass("initial-order")
+			}
+		});
+
+		$("#defaultOrder").click(function () {
+			tableIndex.order([
+				[4, null],[5, null]
+			]).draw();
+			$(this).hide()
+		});
+
+		/*tableIndex.on('page.dt',function() {
+			$("html, body").animate({ scrollTop: $('#wallet').offset().top }, 10);
+		});*/
+        //检测cookie,只显示有资金币种
+        if ($.cookie('show_zero_funds') === undefined || $.cookie('show_zero_funds') === '0') {//显示全部
+            $('#hidezero').prop('checked', false).removeClass('zero-active');
+            $('#min,#max').val('');
+            tableIndex.draw();
+        } else { //只显示有资金
+            $('#hidezero').prop('checked', true).addClass('zero-active');
+            $('#min').val('0.00000001');
+            $('#max').val('9999999999');
+            tableIndex.draw();
+        }
+
+		$('#hideZbtn').on('click', function() { //点击显示/隐藏有资金币种按钮
+
+            if ($('#hidezero').hasClass("zero-active")) { //有资金币种显示
+                $('#min,#max').val('');
+                tableIndex.draw();
+                setTimeout(function(){$('#hidezero').removeClass('zero-active')},200);
+                $.cookie('show_zero_funds', '0',{ expires:30,path: '/' });
+
+            } else { //全部币种显示
+                $('#min').val('0.00000001');
+                $('#max').val('9999999999');
+                tableIndex.draw();
+                setTimeout(function(){$('#hidezero').addClass('zero-active')},200);
+                $.cookie('show_zero_funds', '1',{ expires:30,path: '/' });
+            }
+        });
+
+		var $dep=$("#latestDepo"), $wit=$("#latestWith");
+		if($dep.find("tr").size() > 5){
+			$dep.parent().css("padding-right","10px").prev("table").css("padding-right","26px");
+		} else if($dep.find("tr").size() == 1){
+			$dep.find(".table-empty").show()
+		}
+		if($wit.find("tr").size() > 5){
+			$wit.parent().css("padding-right","10px").prev("table").css("padding-right","26px");
+		} else if($wit.find("tr").size() == 1){
+			$wit.find(".table-empty").show()
+		}
+		$("td:contains('已完成')").css("color","#008069");
+		$("td:contains('已经取消')").css("color","#888");
+		$("td:contains('已经退回')").css("color","#a00");
+		$("td:contains('等待')").css("color","#dc9a00");
+		$("td:contains('正在审核')").css("color","#f60");
+		$("td:contains('正在处理')").css("color","#0086b3");
+
+});
+
+</script> 
+
+</div> <!-- right_content start --><!-- right_mcontent -->
+</div> <!-- main_content start -->
+
+<script>
+	setTimeout(function () {
+		var lb=$(".leftbar"), mc=$(".main_content"),lh=lb.height(),mh=mc.height();
+		if (lh < mh){lb.css("height",mh)}
+	},200)
+</script>
+
+<div class="footer">
+    <div class="fnav">
+        <div class="fnavcon">
+            <ul>
+                <li class="fnav_list">
+                    <!--<div class="fnav_title">关于我们</div>-->
+                    <ul>                        
+                        <li><a href="#">联系我们</a></li>                        
+                        <li><a href="#">费率标准</a></li>
+                        <li><a href="#">API文档</a></li>
+                        <li><a href="#">用户协议</a></li>
+						<li><a href="#">本站公告</a></li>
+                    </ul>
+                </li>
+              
+            </ul>
+        </div>
+        <div class="tail">
+            <span>北斗&nbsp;&nbsp;版权所有 © 2018</span>
+        </div>
+    </div>
+<span class="backToTop" style="display: none;">^</span></div>
+
+<script>
+    //for footer
+    var tier_next_progress='0.0';
+    is_login='beidouchain' != '';
+    show_user_notice = "";
+</script>
+<script src="../../js/footer.js"></script>
+
+</body></html>

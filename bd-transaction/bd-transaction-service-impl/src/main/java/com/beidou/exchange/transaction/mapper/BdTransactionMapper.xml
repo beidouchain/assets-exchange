@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.beidou.exchange.transaction.mapper.BdTransactionMapper" >
+  <resultMap id="BaseResultMap" type="com.beidou.exchange.transaction.entity.BdTransaction" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="exchange_id" property="exchangeId" jdbcType="BIGINT" />
+    <result column="uid1" property="uid1" jdbcType="VARCHAR" />
+    <result column="asset1" property="asset1" jdbcType="VARCHAR" />
+    <result column="amount1" property="amount1" jdbcType="DECIMAL" />
+    <result column="uid2" property="uid2" jdbcType="VARCHAR" />
+    <result column="asset2" property="asset2" jdbcType="VARCHAR" />
+    <result column="amount2" property="amount2" jdbcType="DECIMAL" />
+    <result column="chain_txid" property="chainTxid" jdbcType="VARCHAR" />
+    <result column="confirm_count" property="confirmCount" jdbcType="INTEGER" />
+    <result column="created_on" property="createdOn" jdbcType="BIGINT" />
+    <result column="updated_on" property="updatedOn" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="SMALLINT" />
+  </resultMap>
+</mapper>

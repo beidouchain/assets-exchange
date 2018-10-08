@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>交易详情</title>
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style1.css" rel="stylesheet" type="text/css"/>
+        <link href="css/beidoustyle.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/base/glo_info.js"></script>
+		<script type="text/javascript" src="js/deal/deal.js"></script>
+		<script type="text/javascript" src="js/order/order.js"></script>
+        <style>
+        	body{height: 100%;}
+        	 #xmTanImg,#xmTanImgname{width: 525px;height:347px;background-color: #eee;display: block;border: 1px dashed #000;}
+    .tiscar{color: #4d98ff;font-size: 12px;text-align: center;line-height: 3em;}
+    #xdaTanFileImg,#xdaTanFileImgfan{opacity: 0;width: 94%;display: block;position: absolute;border:0px;}
+    .banner-bg{background-image: url(images/index_bg.png);}
+    
+        </style>
+    </head>
+    <body>
+		<input type="text" id="priceAsset" value=""/>
+		<input type="text" id="asset" value="BEIDOU-USDT"/>
+        <div class="subMenu ui-header">
+            <div class="ui-header-box">
+                <a href="index.html" class="ui-header-logo">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="ui-header-nav">
+                    <dl>
+                        <dd class="on">
+                            <h3>login</h3>
+                        </dd>
+                        <dd>
+                            <h3>sign up</h3>
+                        </dd>
+                        <dd>
+                            <h3 id="language">English</h3>
+                            <ul id="demona" style="top:86px;">
+                                <li>简体中文
+                                </li>
+                                <li>繁体中文
+                                </li>
+                                <li>日本语言
+                                </li>
+                                <li>日本语言
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="banner-bg" style="padding-top: 80px;height: auto;padding-bottom: 50px;">        
+	      <div class="deal_content">
+	      	<div class="deal_curve">
+	      		<div id = "dealPandect" class="deal_pandect">
+	      		</div>
+	      		<div class="deal_img">
+					<img src="images/banner_1.png" style="width: 99%;height: 350px;"/>
+					<!--
+                    <div id="container" style="width: 99%;height: 350px;"></div>
+                    -->
+	      		</div>
+	      	</div>
+	      	<div class="deal_currency">
+	      		<input type="text" placeholder="Input currency abbreviation"/>
+	      		<div class="deal_listtitle">
+	      			<span>Markets</span>
+	      			<span>Last price</span>
+	      			<span>Change</span>
+	      		</div>
+	      		<div class="inner">
+    				<div class="innerbox" id="markets">
+    				</div>
+				</div>
+	      	
+	      	</div>
+	      	<div class="deal_monad">
+	      		<div>
+	      			<h3>Buy BDC</h3>
+	      			<p>Usable   60005.5865  USDT</p>
+	      			<input type="text" placeholder="price" id="buyPrice"/>
+	      			<input type="text" placeholder="count" id="buyAmount"/>
+	      			<span>Total price： <b class="buy_green">0 (cny)</b></span>	      			
+	      			<input class="buy_btn" type="button" value="Buy" onclick="b()"/>
+	      		</div>
+	      		<div>
+	      			<h3>sell BDC</h3>
+	      			<p>Usable   60005.5865  bdc</p>
+	      			<input type="text" placeholder="price" id="sellPrice"/>
+	      			<input type="text" placeholder="count" id="sellAmount"/>
+	      			<span>Total price： <b class="buy_RED">0 (cny)</b></span>	      			
+	      			<input class="sell_btn" type="button" id="sellOn" value="Sell" onclick="s()"/>
+	      		</div>
+	      		<div class="sell_list">
+	      			<div class="deal_selllist">
+		      			<span>Markets</span>
+		      			<span>Last price</span>
+		      			<span>Change</span>
+	      			</div>
+	      			<div class="inner">
+	    				<div class="innerbox" id="sellList">
+	    				</div>
+					</div>
+	      			<div class="deal_selllist">
+		      			<span>Markets</span>
+		      			<span>Last price</span>
+		      			<span>Change</span>
+	      			</div>
+	      			<div class="inner">
+	    				<div class="innerbox" id="buyList">
+	    				</div>
+					</div>
+	      		</div>
+	      		
+				<div style="width: 99%;height: 350px;float: left;background:rgba(36,51,95,0.46);margin-top: 20px;">
+					<div class="box">
+					<!--这个是tab切换标题-->
+						<div class="tab_header">
+							<ul>
+								<li class="current">Recent orders</li>
+								<li>Orders history</li>
+							</ul>
+							<div class="tab_content">
+								<div class="tab_contit">
+									<span>Time</span>
+									<span>Price</span>
+									<span>Amount</span>
+									<span>Turnover</span>
+									<span>Operation</span>
+								</div>
+								<div class="hide">
+									<span>Time</span>
+									<span>Price</span>
+									<span>Amount</span>
+									<span>Turnover</span>
+									<span>Operation</span>
+								</div>
+							</div>
+							<div class="tab_contit" id="orders">
+							</div>
+						</div>
+					</div>
+				</div>
+	      	</div>
+	      	
+	      	<div class="deal_currency jiaoyibills">	 
+	      		<h3>The latest deal</h3>
+	      		<div class="deal_listtitle" style="padding-top: 0px;background: none;">
+	      			<span>Time</span>
+	      			<span>Price</span>
+	      			<span>Volume</span>
+	      		</div>
+	      		<div class="inner">
+    				<div class="innerbox" id="latestDeal">
+    				</div>
+				</div>
+	      	
+	      	</div>
+	      	
+	      </div>
+        </div> 
+		<div class="index_bottom">
+			<div class="bottom_center">
+				<img src="images/logo.png" alt="" />
+				<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="">Agreement</a></li>
+					<li><a href="">Statement</a></li>
+					<li><a href="">Problem</a></li>
+					<li><a href="">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="blogroll">
+				<span>友情链接：</span>
+				<a href="#">火星财经</a>
+				<a href="#">AlCoin</a>
+				<a href="#">核财经</a>
+				<a href="#">BitKan</a>
+				<a href="#">熊猫矿机</a>
+				<a href="#">比特币挖矿</a>
+				<a href="#">玩币族</a>
+				<a href="#">价值区块链</a>
+				<a href="#">链向财经</a>
+				<a href="#">比特币家园</a>
+				<a href="#">AToken钱包</a>
+				<a href="#">非小号</a>
+				<a href="#">币源社区</a>
+				<a href="#">MyToken</a>
+				<a href="#">链世界</a>
+				<a href="#">币报道</a>
+				<a href="#">加密数字货币</a>
+				<a href="#">币区势</a>
+				<a href="#">链闻</a>
+				<a href="#">比特币之家</a>
+				<a href="#">好币网</a>
+				<a href="#">区块链之家</a>
+				<a href="#">区块链中文网</a>
+				<a href="#">九个亿财经</a>
+				<a href="#">比特街</a>
+				<a href="#">挖币网</a>
+				<a href="#">巴比特</a>
+				<a href="#">链外</a>
+				<a href="#">未来财经</a>
+				<a href="#">比特时代</a>
+				<a href="#">币头条</a>
+				<a href="#">火球财经</a>
+			</div>
+			<div class="webmessage">
+				<span>Record number：© 2017 豫ICP备12021065号</span>
+				<span>Official network：http://www.beidouchain.com</span>
+			</div>
+		</div>
+        <script type="text/javascript">
+           var swiper = new Swiper('.swiper-container', {
+				loop: true,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				autoplay: 2500,
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev'
+			});
+            jQuery(".ui-header-nav").slide({
+                type: "menu",
+                titCell: "dd",
+                targetCell: "ul",
+                delayTime: 0,
+                defaultPlay: false,
+                returnDefault: true
+            });
+			$("#demona").children().click(function(){
+				//alert(this.innerHTML)
+				$("#language").html(this.innerHTML)
+			})
+
+
+			var $asd=$(".tab_header ul li");
+
+			$asd.click(function(){
+
+				$(this).addClass("current").siblings().removeClass("current");
+
+				var $index=$asd.index(this);
+
+				var $content=$(".tab_content div");
+
+				$content.eq($index).show().siblings().hide();
+
+				if($index == 1){
+				    h(1);
+				}else{
+                    r(0);
+				}
+
+			});
+			/**
+           var dom = document.getElementById("container");
+           var myChart = echarts.init(dom);
+           var app = {};
+           option = null;
+           option = {
+               xAxis: {
+                   type: 'category',
+                   data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+               },
+               yAxis: {
+                   type: 'value'
+               },
+               series: [{
+                   data: [900, 932, 600, 934, 1290, 1330, 1320],
+                   type: 'line'
+               }]
+           };
+           ;
+           if (option && typeof option === "object") {
+               myChart.setOption(option, true);
+           }
+           */
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.beidou</groupId>
+    <artifactId>bd-web</artifactId>
+    <name>bd-web</name>
+    <description>web project for Spring Boot</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <packaging>war</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <project.build.version>1.0</project.build.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <fastjson.version>1.2.36</fastjson.version>
+        <google.guava.version>19.0</google.guava.version>
+        <org.slf4j.log4j12.version>1.7.21</org.slf4j.log4j12.version>
+        <org.slf4j.version>1.7.2</org.slf4j.version>
+        <lombok.version>1.16.20</lombok.version>
+        <org.apache.commons.version>3.5</org.apache.commons.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <redis.clients.jedis.version>2.8.1</redis.clients.jedis.version>
+        <com.alibaba.druid.version>1.0.18</com.alibaba.druid.version>
+        <commons.beanutils.version>1.9.3</commons.beanutils.version>
+        <kryo.version>2.24.0</kryo.version>
+        <org.mybatis.version>3.4.2</org.mybatis.version>
+        <tk.mybatis.mapper.version>3.4.2</tk.mybatis.mapper.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <javax.persistence.api.version>1.0.2</javax.persistence.api.version>
+        <mybatis-generator-core.version>1.3.2</mybatis-generator-core.version>
+        <pagehelper.version>5.0.4</pagehelper.version>
+        <jsqlparser.version>1.0</jsqlparser.version>
+        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis.clients.jedis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-mybatis</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-redis</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-service-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-idworker-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-idworker-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.briandilley.jsonrpc4j</groupId>
+            <artifactId>jsonrpc4j</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-blockchain-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-ocr-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-market-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-market-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-order-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-order-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-user-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-user-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-balance-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-balance-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-transaction-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-transaction-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-match-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-match-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
+    <profiles>
+        <profile>
+            <id>dev</id> <!-- 本地开发 -->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <appName>exchange</appName>
+            </properties>
+
+        </profile>
+        <profile>
+            <id>test</id> <!-- 本地开发2 -->
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <appName>exchange</appName>
+            </properties>
+
+        </profile>
+    </profiles>
+</project>

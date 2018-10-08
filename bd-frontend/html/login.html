@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style1.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/base/glo_info.js"></script>
+    <script type="text/javascript" src="js/user/user.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+        }
+
+        #xmTanImg, #xmTanImgname {
+            width: 525px;
+            height: 347px;
+            background-color: #eee;
+            display: block;
+            border: 1px dashed #000;
+        }
+
+        .tiscar {
+            color: #4d98ff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 3em;
+        }
+
+        #xdaTanFileImg, #xdaTanFileImgfan {
+            opacity: 0;
+            width: 94%;
+            display: block;
+            position: absolute;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="subMenu ui-header">
+    <div class="ui-header-box">
+        <a href="index.html" class="ui-header-logo">
+            <img src="images/logo.png" alt="">
+        </a>
+
+        <div class="ui-header-nav">
+            <dl>
+                <dd class="on" id="loginhtml">
+                    <h3>login</h3>
+                </dd>
+                <dd>
+                    <h3>sign up</h3>
+                </dd>
+                <dd>
+                    <h3 id="language">English</h3>
+                    <ul id="demona" style="top:86px;">
+                        <li>简体中文
+                        </li>
+                        <li>日本语言
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="banner-bg" style="padding-top: 160px;">
+
+    <div class="magic-background">
+        <div class="magic-content">
+            <div class="magic-header">
+
+                <div class="magic-tab">
+                    <div class="hd magic-tab-head">
+                        <ul class="clearfix">
+                            <li class="on" style="margin-left:0">登　录</li>
+                            <li>注　册</li>
+                        </ul>
+                    </div>
+                    <div class="bd magic-tab-body">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="magic-item-title">
+                                    <input type="text" placeholder="您的地址：" id="loginAddress"/>
+                                    <input type="text" placeholder="您的私钥：" id="loginPrivateKey"/>
+                                    <input type="button" value="登录" style="margin-bottom: 20px;" class="btn_zcna"
+                                           id="loginin"/>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="clearfix" style="padding: 0px 87px;margin-top:20px;">
+                            <input style="width: 525px;height: 347px;" type="file" id="xdaTanFileImg"
+                                   onchange="xmTanUploadImg(this)" accept="image/*"/>
+                            <img src="images/reshz.png" alt="" id="xmTanImg"/>
+                            <input type="text" placeholder="邀请码" style="margin-bottom: 40px;" id="invationCode"/>
+                            <input type="button" value="开始注册" class="btn_zc" id="btn_hide"/>
+
+                            <div class="magic-item-title" style="display: none;" id="btn_key">
+
+                                <span style="font-size: 16px;text-align: center;display: block;line-height: 120px;color: red;font-weight: 700;">私钥是您的唯一支付凭证，返回或退出浏览器后无法返回</span>
+                                <input type="text" value="" style="margin-bottom: 40px;" id="address"/>
+                                <input type="text" value="" style="margin-bottom: 40px;" id="privateKey"/>
+                                <input type="text" value="" style="margin-bottom: 80px;" id="copyUserInfo"/>
+                                <input type="button" value="复制地址以及私钥" style="margin-bottom: 20px;margin-top: 20px;"
+                                       class="btn_zc" id="btn_zc" data-clipboard-action="copy" data-clipboard-target="#copyUserInfo"/>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#loginhtml").click(function () {
+        window.location.href = 'login.html'
+    })
+    $("#loginin").click(function () {
+
+    })
+
+    jQuery(".magic-tab").slide({
+        effect: "left",
+        autoPlay: false,
+        delayTime: 500
+    });
+
+
+    var clipboard = new ClipboardJS('.btn_zc');
+
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        alert("复制成功");
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert("请手动复制");
+    });
+
+
+    $("#btn_hide").click(function () {
+
+        var imag = document.getElementById("xdaTanFileImg");
+
+
+        var img = document.getElementById("xmTanImg");
+
+        var formData = new FormData();
+        var img_file = document.getElementById("xdaTanFileImg");
+        var fileObj = img_file.files[0];
+        if (fileObj == null) {
+            alert("请上传图片");
+            return;
+        }
+        var invationCode = $("#invationCode").val();
+        formData.append("file", fileObj);
+        formData.append("invationCode", invationCode);
+        console.log(formData)
+        $.ajax({
+            url: webPathName + "/ocr/registCard.do",
+            type: "post",
+            data: formData,
+            async: false,
+            processData: false,
+            contentType: false,
+            success: function (dd) {
+                var data = JSON.parse(dd);
+                // console.log(data)
+                console.log("data=" + JSON.stringify(data));
+                var resultCode = data.result;
+                if (resultCode == 0) {
+                    // $api.setStorage('imgurl', data.url);
+                    //$api.setStorage('zijiportrait', data.url);
+                    var resultData = data.data;
+                    $("#address").val(resultData.address);
+                    $("#privateKey").val(resultData.privateKey);
+
+                    var copyUserInfoStr = "地址：" + resultData.address + " 私钥：" + resultData.privateKey + " 邀请码：" + resultData.id;
+                    $("#copyUserInfo").val(copyUserInfoStr);
+
+                    $("#xdaTanFileImg").hide();
+                    $("#xmTanImg").hide();
+                    $("#btn_hide").hide()
+                    $("#btn_key").show();
+                } else {
+                    alert("注册失败");
+                }
+            }
+        })
+
+
+    })
+    jQuery(".ui-header-nav").slide({
+        type: "menu",
+        titCell: "dd",
+        targetCell: "ul",
+        delayTime: 0,
+        defaultPlay: false,
+        returnDefault: true
+    });
+
+    //          $(document).ready( function() {
+    //
+    //              $('.subMenu').smint({
+    //
+    //                  'scrollSpeed' : 1000
+    //
+    //              });
+    //
+    //          });
+    $("#demona").children().click(function () {
+        //alert(this.innerHTML)
+        $("#language").html(this.innerHTML)
+    })
+    //  (function() {
+    $.fn.smint = function (options) {
+        $(this).addClass('ui-header')
+        var settings = $.extend({
+            'scrollSpeed ': 500
+        }, options);
+        return $('.ui-header a').each(function () {
+            if (settings.scrollSpeed) {
+                var scrollSpeed = settings.scrollSpeed
+            }
+            var stickyTop = $('.ui-header').offset().top;
+            var stickyMenu = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > stickyTop) {
+                    $('.ui-header').css({
+                        'position': 'fixed',
+                        'top': 0
+                    }).addClass('fixed');
+                } else {
+                    $('.ui-header').css({
+                        'position': 'absolute',
+                        'top': stickyTop
+                    }).removeClass('fixed');
+                }
+            };
+            stickyMenu();
+            $(window).scroll(function () {
+                stickyMenu();
+            });
+            $(this).on('click', function (e) {
+                var selectorHeight = $('.ui-header').height();
+                e.preventDefault();
+                var id = $(this).attr('id');
+                var goTo = $('div.' + id).offset().top - selectorHeight;
+                $("html, body").animate({
+                    scrollTop: goTo
+                }, scrollSpeed);
+            });
+        });
+    }
+    //              }
+    //            )();
+
+</script>
+<script>
+    function xmTanUploadImg(obj) {
+        var file = obj.files[0];
+        var imagSize = document.getElementById("xdaTanFileImg").files[0].size;
+        //  alert("图片大小："+imagSize+"B")
+        if (imagSize > 204800) {
+            alert('提示信息：请上传小于200kb的图片！')
+            return
+        }
+        console.log(obj);
+        console.log(file);
+        console.log(JSON.stringify(obj));
+        console.log(JSON.stringify(file));
+        console.log("file.size = " + file.size);  //file.size 单位为byte
+
+        var reader = new FileReader();
+
+        //读取文件过程方法
+        reader.onloadstart = function (e) {
+            console.log("开始读取....");
+
+
+        }
+        reader.onprogress = function (e) {
+            console.log("正在读取中....");
+
+
+        }
+        reader.onabort = function (e) {
+            console.log("中断读取....");
+
+        }
+        reader.onerror = function (e) {
+            console.log("读取异常....");
+
+
+        }
+        reader.onload = function (e) {
+            console.log("成功读取....");
+            var img = document.getElementById("xmTanImg");
+            img.src = e.target.result;
+        }
+
+        reader.readAsDataURL(file)
+    }
+
+
+</script>
+
+</body>
+</html>

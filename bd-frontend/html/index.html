@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style1.css" rel="stylesheet" type="text/css"/>
+        <link href="css/beidoustyle.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/base/glo_info.js"></script>
+		<script type="text/javascript" src="js/index/index.js"></script>
+        <style>
+        	body{height: 100%;}
+        	 #xmTanImg,#xmTanImgname{width: 525px;height:347px;background-color: #eee;display: block;border: 1px dashed #000;}
+    .tiscar{color: #4d98ff;font-size: 12px;text-align: center;line-height: 3em;}
+    #xdaTanFileImg,#xdaTanFileImgfan{opacity: 0;width: 94%;display: block;position: absolute;border:0px;}
+    .banner-bg{background-image: url(images/index_bg.png);}
+    .swiper-container {
+        width: 100%;
+        height: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{width: 100%;}
+        </style>
+    </head>
+    <body>
+        <div class="subMenu ui-header">
+            <div class="ui-header-box">
+                <a href="index.html" class="ui-header-logo">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="ui-header-nav">
+                    <dl>
+                        <dd class="on" id="loginhtml">
+                            <h3>login</h3>
+                        </dd>
+                        <dd>
+                            <h3>sign up</h3>
+                        </dd>
+                        
+                        <dd id="jydetail">
+                            <h3>ID:693145</h3>
+                        </dd>
+                        <dd>
+                            <h3 id="language">English</h3>
+                            <ul id="demona" style="top:86px;">
+                                <li>简体中文
+                                </li>
+                                <li>繁体中文
+                                </li>
+                                <li>日本语言
+                                </li>
+                                <li>日本语言
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="banner-bg" style="padding-top: 80px;height: auto;">        
+	        <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<img src="images/banner.png" alt="" />
+		            </div>
+		            <div class="swiper-slide">
+		            	<img src="images/banner_1.png" alt="" />
+		            </div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		        <!-- Add Navigation -->
+		        <div class="swiper-button-prev"></div>
+		        <div class="swiper-button-next"></div>
+    		</div>
+    		<div class="index_center">
+    			<div id="mainstream" class="index_mainstream">
+    				<ul>
+    					<li>
+    						<img src="images/bdc_logo.png" alt="" />
+    						<span>BDC/CNY</span>
+    						<strong>￥4.235</strong>
+    					</li>
+    					<li>
+    						<img src="images/bdc_logo.png" alt="" />
+    						<span>BDC/CNY</span>
+    						<strong>￥5.235</strong>
+    					</li>
+    					<li>
+    						<img src="images/bdc_logo.png" alt="" />
+    						<span>BDC/CNY</span>
+    						<strong>￥45895.235</strong>
+    					</li>
+    					<li>
+    						<img src="images/bdc_logo.png" alt="" />
+    						<span>BDC/CNY</span>
+    						<strong>￥45895.235</strong>
+    					</li>
+    				</ul>
+    			</div>
+    			<div id="all_currency_info" class="all_currency">
+    				<ul>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="amountincrease">-2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="decline">2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="amountincrease">-2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="decline">2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="amountincrease">-2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="currency_tit">
+    							<p>BDC/CNY</p>
+    							<strong><span>500.2546</span></strong>
+    							<!--<img src="images/index_jtbot.png" alt="" />-->
+    							<ul>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMaximum price</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HMinimum price</strong>
+    								</li>
+    								<li>
+    									<span class="decline">2.18%</span>
+    									<strong>24Hchanges</strong>
+    								</li>
+    								<li>
+    									<span>2.18</span>
+    									<strong>24HTrading volume</strong>
+    								</li>
+    							</ul>
+    						</div>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+        </div> 
+		<div class="index_bottom">
+			<div class="bottom_center">
+				<img src="images/logo.png" alt="" />
+				<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="">Agreement</a></li>
+					<li><a href="">Statement</a></li>
+					<li><a href="">Problem</a></li>
+					<li><a href="">Contact us</a></li>
+				</ul>
+			</div>
+			<div class="blogroll">
+				<span>友情链接：</span>
+				<a href="#">火星财经</a>
+				<a href="#">AlCoin</a>
+				<a href="#">核财经</a>
+				<a href="#">BitKan</a>
+				<a href="#">熊猫矿机</a>
+				<a href="#">比特币挖矿</a>
+				<a href="#">玩币族</a>
+				<a href="#">价值区块链</a>
+				<a href="#">链向财经</a>
+				<a href="#">比特币家园</a>
+				<a href="#">AToken钱包</a>
+				<a href="#">非小号</a>
+				<a href="#">币源社区</a>
+				<a href="#">MyToken</a>
+				<a href="#">链世界</a>
+				<a href="#">币报道</a>
+				<a href="#">加密数字货币</a>
+				<a href="#">币区势</a>
+				<a href="#">链闻</a>
+				<a href="#">比特币之家</a>
+				<a href="#">好币网</a>
+				<a href="#">区块链之家</a>
+				<a href="#">区块链中文网</a>
+				<a href="#">九个亿财经</a>
+				<a href="#">比特街</a>
+				<a href="#">挖币网</a>
+				<a href="#">巴比特</a>
+				<a href="#">链外</a>
+				<a href="#">未来财经</a>
+				<a href="#">比特时代</a>
+				<a href="#">币头条</a>
+				<a href="#">火球财经</a>
+			</div>
+			<div class="webmessage">
+				<span>Record number：© 2017 豫ICP备12021065号</span>
+				<span>Official network：http://www.beidouchain.com</span>
+			</div>
+		</div>
+        <script type="text/javascript">
+        	$("#loginhtml").click(function(){
+        		window.location.href='login.html'
+        	})
+        	$("#myinfo").click(function(){
+        		window.location.href='personalcenter.html'
+        	})
+        	$("#jydetail").click(function(){
+        		window.location.href='deal.html'
+        	})
+           var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2500,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    });
+            jQuery(".ui-header-nav").slide({
+                type: "menu",
+                titCell: "dd",
+                targetCell: "ul",
+                delayTime: 0,
+                defaultPlay: false,
+                returnDefault: true
+            });
+$("#demona").children().click(function(){
+	//alert(this.innerHTML)
+	$("#language").html(this.innerHTML)
+})
+//          $(document).ready( function() {
+//
+//              $('.subMenu').smint({
+//
+//                  'scrollSpeed' : 1000
+//
+//              });
+//
+//          });
+
+//          (function() {
+//                  $.fn.smint = function(options) {
+//                      $(this).addClass('ui-header')
+//                      var settings = $.extend({
+//                          'scrollSpeed ': 500
+//                      }, options);
+//                      return $('.ui-header a').each(function() {
+//                          if (settings.scrollSpeed) {
+//                              var scrollSpeed = settings.scrollSpeed
+//                          }
+//                          var stickyTop = $('.ui-header').offset().top;
+//                          var stickyMenu = function() {
+//                              var scrollTop = $(window).scrollTop();
+//                              if (scrollTop > stickyTop) {
+//                                  $('.ui-header').css({
+//                                      'position': 'fixed',
+//                                      'top': 0
+//                                  }).addClass('fixed');
+//                              } else {
+//                                  $('.ui-header').css({
+//                                      'position': 'absolute',
+//                                      'top': stickyTop
+//                                  }).removeClass('fixed');
+//                              }
+//                          };
+//                          stickyMenu();
+//                          $(window).scroll(function() {
+//                              stickyMenu();
+//                          });
+//                          $(this).on('click', function(e) {
+//                              var selectorHeight = $('.ui-header').height();
+//                              e.preventDefault();
+//                              var id = $(this).attr('id');
+//                              var goTo = $('div.' + id).offset().top - selectorHeight;
+//                              $("html, body").animate({
+//                                  scrollTop: goTo
+//                              }, scrollSpeed);
+//                          });
+//                      });
+//                  }
+//              }
+          //  )();
+
+        </script>
+
+
+    </body>
+</html>

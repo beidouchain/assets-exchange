@@ -1,0 +1,161 @@
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.magic-background {
+	width: 700px;
+    /*height: 100%;*/
+    background-color: #192246;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.magic-content {
+    width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.magic-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.magic-header-title {
+    font-size: 50px;
+    color: #333;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.magic-tab {
+    padding-top: 50px;
+    font-size: 0;
+    /* display: inline-block; */
+    /* position: relative; */
+}
+
+.magic-tab-head {
+    width: 220px;
+    margin: 0 auto;
+}
+
+.magic-tab-head ul li {
+    padding-bottom: 15px;
+    width: 70px;
+    margin-left: 70px;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0 12px 15px 12px;
+    line-height: 1;
+    /*width: auto;*/
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    height: 33px;
+    float: left;
+}
+
+.magic-tab-head ul .on {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.magic-tab-body ul {
+    margin-top: 90px;
+    margin-left: 0px;
+    text-align: center;
+    width: 700px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.magic-tab-body ul li {
+    margin: 0 85px;
+    float: left;
+    width: 530px;
+    margin-bottom: 60px;
+}
+
+.magic-item-title {
+    text-align: right;
+    float: left;
+    margin-right: 30px;
+    width: 80px;
+    margin-left: -20px;
+}
+
+.magic-item-text {
+    font-size: 25px;
+    line-height: 1;
+    font-weight: normal;
+    height: 36px;
+    overflow: hidden;
+}
+
+.magic-item-time {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    line-height: 1.8;
+    height: 50px;
+    overflow: hidden;
+}
+
+.magic-item-info {
+    float: left;
+    width: 355px;
+    text-align: left;
+}
+
+.magic-item-info p {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    line-height: 1.8;
+    height: 50px;
+    overflow: hidden;
+}
+
+.magic-info-title {
+    font-size: 18px;
+    width: 355px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.magic-info-title a:hover{color:#2f82ff;}
+
+.icon-hot {
+    display: inline-block;
+    _zoom: 1;
+    width: 25px;
+    height: 25px;
+    background: url(../images/icon-hot.gif);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.magic-info-text {
+    vertical-align: middle;
+}
+.magic-item-title{width: 100%;}
+.magic-item-title input{
+	width: 100%;height: 60px;background-color: #192246;
+	border: 1px dashed #fff;color: #fff;padding: 0px  20px;box-sizing: border-box;font-size: 16px;margin-bottom:90px;
+}
+.magic-item-title .btn_zcna{background-color: #4d98ff;width: 400px;border: 0px;color: #fff;float: left;margin-left: 65px;height: 50px;
+cursor: pointer;border-radius: 5px;}
+.magic-item-title .btn_zc,.btn_zc{background-color: #4d98ff;width: 400px;border: 0px;color: #fff;float: left;margin-left: 65px;height: 50px;
+cursor: pointer;border-radius: 5px;margin-top: 50px;}

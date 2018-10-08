@@ -1,0 +1,8 @@
+com/beidou/market/service/impl/MarketServiceImpl.class
+com/beidou/market/mapper/AssetCategoryMapper.class
+com/beidou/market/service/impl/LastPriceServiceImpl.class
+com/beidou/market/mapper/ExchangeHistoryMapper.class
+com/beidou/market/service/impl/DbAssetsServiceImpl.class
+com/beidou/market/controller/AssetsMarketController.class
+com/beidou/market/mapper/LastPriceMapper.class
+com/beidou/market/mapper/LastExchangeMapper.class

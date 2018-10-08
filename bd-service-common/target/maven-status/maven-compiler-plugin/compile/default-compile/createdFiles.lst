@@ -1,0 +1,6 @@
+com/beidou/exchange/service/ServiceResponseMessageConverter.class
+com/beidou/exchange/service/WebUtil.class
+com/beidou/exchange/service/GlobalHandlerExceptionResolver.class
+com/beidou/exchange/service/impl/CommonGenericServiceImpl.class
+com/beidou/exchange/service/CommonGenericService.class
+com/beidou/exchange/service/ServiceResponse.class

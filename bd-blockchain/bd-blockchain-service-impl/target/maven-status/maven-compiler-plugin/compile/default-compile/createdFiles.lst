@@ -1,0 +1,7 @@
+com/beidou/blockchain/service/impl/AssetsServiceImpl.class
+com/beidou/blockchain/controller/AssetsController.class
+com/beidou/blockchain/controller/ManagingWalletAddressesController.class
+com/beidou/blockchain/controller/AtomicController.class
+com/beidou/blockchain/service/impl/AtomicServiceImpl.class
+com/beidou/blockchain/service/impl/ManagingWalletAddressesServiceImpl.class
+com/beidou/blockchain/controller/UserInfoController.class

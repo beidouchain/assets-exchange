@@ -1,0 +1,4 @@
+com/beidou/exchange/transaction/entity/BdTransaction.class
+com/beidou/exchange/transaction/service/BdTransactionService.class
+com/beidou/exchange/transaction/service/ExchangeService.class
+com/beidou/exchange/transaction/entity/Exchange.class

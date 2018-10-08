@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bd-market</artifactId>
+        <groupId>com.beidou</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bd-market-service-impl</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-market-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-mybatis</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-blockchain-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-service-common</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-balance-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-balance-service-impl</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-idworker-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beidou</groupId>
+            <artifactId>bd-order-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,4 @@
+com/beidou/exchange/client/OcrBaiduFactory.class
+com/beidou/exchange/uitls/FileUtil.class
+com/beidou/exchange/config/OcrBaidu.class
+com/beidou/exchange/service/impl/OcrServiceImpl.class

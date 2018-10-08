@@ -1,0 +1,113 @@
+body,.footer,.maichu-form:before,.maichu-form:after{ /*background: #1b242d;*/ background: #131a21; color: #aaa}
+.k-line-container,#graphbox{ background: none !important;}
+.highcharts-background{fill:none}
+.k-line-container.fullscreen-con {background: #131a21 !important;}
+.caret:before,.header .caret:before{ color:#151b23 !important; }
+.gateio-nav .caret:before{color:#252e3e !important}
+.second-nav{ left: -30px; top:42px}
+.second-nav .caret:before{color:#333a44 !important;}
+/*.second-nav > li:hover > a .caret:before {color: #9a5629 !important; }*/
+.second-nav > li {width: 150px;}
+.second-nav > li > a { padding: 12px 0 !important;}
+.third-nav{ left: 150px}
+.gateio-nav > li ul {background: #333a44 !important;}
+.top-up #nickName .caret:before,.top-up .caret:before{ color:#191b23 }
+a,.gateio-nav > li > a,.ask_ans,.step .wj a,.caret,.login_lan .lang-option,.top-up a,.left_btn,.top-nav .navlist .nav-btn,div.line-type button,.main_title h1 a,.latnewslist a, .tese a{ color: #8f9fa5}
+.topprice li,.button,.main_title h1 span,.m_title,.introduction h3,.timeline_btn,.sorting_disabled:hover,.main_title .coin-title strong{ color: #aaa}
+/*fundlist color fixed start*/
+#funds span[style="color:#000"],#funds span[style="color:#0e1010"],#funds span[style="color:#303031"],#funds span[style="color:#232427"],#funds span[style="color:#36383e"],.dataTables_wrapper .dataTables_paginate .paginate_button{ color: #ccc !important;}
+#funds span[style="color:#112b44"], #funds span[style="color:#0c112e"], #funds span[style="color:#052449"], #funds span[style="color:#032646"]{color: #4d5e6f !important;}
+#funds span[style="color:#221568"]{color: #4d5e6f !important;}
+/*fundlist color fixed end*/
+.rate_up, .red, font[color="red"], .main_title h1 .red,.icon-arrow-up,#ul-bid-list .right-align.price,.en-body #ul-ask-list .right-align.price,ul#ul-bid-list .price:before,button.btnOn, .line-type button.btnOn,.topnum,.add-dn-qr,.user-info-box p span, .user-info-box em,#crFund span,.funds-p-tier strong,.cion-dtl-ul b,.fail-tip,.navlist .btn-active i,.dataTables_empty, .left_con .marketlist .dataTables_empty,.gateio-nav > li:hover > a, .gateio-nav > .nav-active > a,.top-up .ask_ans:hover,.top-up a:hover,.lang-option:hover span,.left_btn:hover,.sortable.sorting:hover, .sorting_asc:hover,a:hover,.fnavcon a:hover,.bo_selected, .timeline_btn:hover{ color: #d86767}
+.top-links:hover path,.k-line-container .button:hover path{fill:#d86767}
+.m_con_buy .jiaoyi_btn,.r-btn,.step .button-flat-action,.fund-deposit,.fxts i,.ask_ans i ,div .room-tag,.hot:after, .new:after,.sectioncont .sms-setup #submit, .sectioncont #submit.sub-btn, .sectioncont .sub-btn, .sub-btn,.en-body .dealbox .jiaoyi_btn{background:#964b4b}
+.fund-withdraw,.en-body .m_con_buy .jiaoyi_btn {background: #25796a}
+.fund-to-trade {background: #0a83ab;}
+.bizhong_en,.coin-name b {color: #cbd6e0;}
+.rate_down,.green,font[color="green"],.main_title h1 .green,.icon-arrow-down,#ul-ask-list .right-align.price, ul#ul-ask-list .price:before,.en-body #ul-bid-list .right-align.price,.en-body ul#ul-bid-list .price:before,.main_title h1 font[color="#008069"]{color:#36a792}
+.en-body .up .price, .en-body #ul-trade-list font[color="#339900"], .en-body .rate_up, .en-body .green, .en-body font[color="green"], .en-body .main_title h1 .green, .en-body .icon-arrow-up ,#sellYuE,#sellYuE .coin-unit,.down .price,.en-body #buyYuE,.en-body #buyYuE .coin-unit,.en-body .up .price{color:#36a792 !important;}
+#ulGlobalMarkets .green {color: #49736b}
+.login_box {background: rgba(37, 46, 62,0.9);}
+.third-nav a img, .third-nav a .icon-16{ border: none; border-radius: 50%}
+.tline_btns .btn_selected{ color: #fff}
+.sorting,.sorting_desc,.sorting_asc{ background-color: transparent; font-weight: normal}
+.even,#trade-list li:nth-child(even),#ulGlobalMarkets li:nth-child(even),#ask-list li:nth-child(even), #bid-list li:nth-child(even),.trade-main .trade-list_re li:nth-child(even),#marketlistTabCon tbody tr:nth-child(even){ background: rgba(0,0,0,0.1)}
+.left_con .even:hover, .left_con .odd:hover,.even:hover,.odd:hover,#ask-list li:hover, #bid-list li:hover,.trade-main .trade-list_re li:hover{background: #1b232b !important}
+.side-sev ul li,.footer,.leftbar,.second-nav > li {border-color: #3e404a}
+.left_con .marketlist tr > td,.myacc-con td,.table-inacc td{border-color:#19222b}
+.leftbar,.footer{ border-color: #080d13; border-width: 3px}
+.advantage,.your-total,.m_title,div.b-s-title,th,.left_btn ,ul.draw-tools li,.left_con_login,.login-con .maichu,.myacc-con thead td,#top_last_rate_change dl:first-child,.newstitle,.newstail,.gm-head,div .bind_title h3,#top_last_rate_change > span:first-child{border-color: #343a48}
+.left_con .marketlist th{border-color: #19222b;}
+.area-btn-bg {background: none;border-bottom: 1px solid #343a48;}
+.tline_btn.btn_selected .caret{color: #343a48;}
+#progrLi, #fprogrLi{background-color: #343a48;}
+.buy-sell-order .title-line.sorting, .buy-sell-order .number.sorting,#tableAskList .maichu,.cjbox,.trade-main .trade-list_re li,.tip-con h3{border-color:#2f3440 !important}
+.fnav{ border: none;background: none;}
+.step .username .intxt, .step .password .intxt, .step .cap-code .intxt,#marketSearch,.inputRate,.leftregi form input, .rightlogin form input,.sectioncont input, .sectioncont select,.winput,#fpass{ background-color: rgba(54, 60, 68, 0.6);border-color: #4b535f !important;}
+.dataTables_wrapper .dataTables_filter input{background-color:#30363f;border-color: #4b535f !important;}
+/*.login_box,.button,.area-btn-bg,.tline_btns .btn_selected{ background-color:#28303a}
+.logo img,.logo svg {margin:7px 15px 0 0;}*/
+.top-up {background:#131a21}
+.sidebox circle,.sideweixin circle{ fill:#25313e}
+#hideprice + .vr-btn, .hide-show-mark + .vr-btn, #hidezero + .vr-btn {background-color: #2d3946;}
+.step .username .intxt:focus,.step .password .intxt:focus,.step .cap-code .intxt:focus{background-color: rgba(91, 98, 107, 0.6);}
+input,.sectioncont select,#action_type,#currencyId,#status_type{ color: #fff}
+input:focus,#marketSearch:focus,.has-feedback .form-control:focus{border-color: #5d708c !important;}
+.leftbar,.main_content{ border-top: 3px solid #080d13 !important}
+.leftbar, .left_btn,.main_content,.maidan,.cjbox,.left_con_login{ background: none !important;}
+div.header{background: none;}
+.ask_ans i{ background:#313b44; color: #aaa }
+.tico path{fill:#aaa }
+.introduction,.leftbar .rate_up,.leftbar .rate_down{ color: #aaa !important}
+div .react-stockcharts-tooltip {fill: #d8e1e6;}
+.infolist span {color: #b9bfc7;}
+.download .download-list .btn {color: #b3bed0;}
+.dataTable .sortable:after,.dataTable .sorting_asc:after,.dataTable .sorting_desc:after, #customlist th:after {  background-color: #131a21}
+/*chat start*/
+div#root{background-color: #2e363e;}
+div .chat-container,div .top-bar{ border-color: #5d6673}
+div .line{ background-color: #5d6673}
+div.room-hide .caret:before{ color:#2e363e !important; }
+div .room-notice,div .room-notice:hover{ color: #de5959}
+.face-img{ background: #fff; border-radius: 50%}
+.webim-msg-value,.chat-container textarea{ color: #eee}
+.system span{color: #de5959 !important;}
+#uamodal{background: #2e363e !important;}
+.VIP-1 {color: #84a4f5;}
+.VIP-2 {color: #e6a861;}
+.VIP-7 {color: #bd7fff;}
+.VIP-8 {color: #ff9df2}
+.VIP-9 {color: #ff2929;}
+.VIP-10 {color: #ef3800;}
+/*chat end*/
+::-webkit-scrollbar-track {background: #333f4a !important;}
+#currVol{ color: #aaa}
+#currVol small,#top_last_rate_change .price-dl em,.b-s-t-left span:first-child{ color: #888}
+.tip-con {background: #292f35 !important;}
+ul.sub-menu li a {color: #8f9fa5;text-shadow: none;background: #131a21;border-color: #182027;}
+.funds-p-tier ul,.funds-p-tier li,.f-d-info,.deposit-table tbody,.deposit-table thead{ background: none;color: #aaa;border-color: #505561;}
+.dp-history tr td{border-color: #505561 !important;}
+#myuserid, .fund-right .m_title{ border: none;background: #313741;}
+.funds-p-tier #crFund,.funds-p-tier b,font[color="#000000"],font[color="#1B1363"]{ color: #aaa}
+font[color="#043859"]{ color:#3cf }
+font[color="blue"]{ color: #b5a73a;}
+font[color="#800080"]{ color: #bd58bd}
+.tier-info strong.tier-level:after,#myuserid, .fund-right .m_title{ color: #eee !important}
+div .accordion > li > a {color: #fff; border-bottom: 1px solid #343a48;background: #131a21;}
+.funds-p-tier #fprogrLi{ background:#505561 }
+ul.sub-menu li:hover a {background: #232a33;}
+.decimal-tip {background: #262f38;}
+#noty_center_layout_container li, .gateioNotyTheme {background: rgba(38, 43, 49, 0.95);}
+.leftbar .icon-16{ opacity: 0.8}
+.leftbar .even:hover .icon-16,.leftbar .odd:hover .icon-16{ opacity: 1}
+.coin-latest-info{ border-color:#080d13; border-width: 3px; background: none}
+.info-dtl{ border-color:#282e36 }
+.info-dtl li em,.lighter-font{ color: #d8dfe4}
+.maichu-form,.en-body .mairu-form{ border-color:#2f3440 }
+.dark-body #funds tr[data-id="zero"],.dark-body .no-od,.fd-emp,#my-fund-list li[data-id="zero"] span {color: #3f444e;}
+#my-fund-list li span.my-type{ color: #aaa}
+#depth-precision_ul{background: #131a21;box-shadow: none;}
+#depth-precision_ul li:hover{
+  background: #1b232b !important;
+}

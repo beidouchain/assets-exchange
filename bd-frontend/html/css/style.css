@@ -1,0 +1,246 @@
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #fff;
+    color: #666;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    /*margin: 0;
+    font: inherit;
+    color: inherit;*/
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+
+.ui-header {
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    position: absolute;
+    width: 100%;
+    min-width: 1300px;
+    z-index: 100;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.ui-header-box {
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.ui-header-logo {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    display: block;
+    width: 140px;
+    height: 64px;
+    margin-top: 5px;
+    float: left;
+}
+
+.ui-header-logo img {
+    width: 135px;
+    display: block;
+    border: none;
+    height: 54px;
+    margin-top: 8px;
+}
+.ui-header-nav dl dd{
+	cursor: pointer;
+}
+.ui-header-nav dl dd ul {
+    display: none;
+    transition: all .3s ease;
+    background-color: rgba(0, 32, 75, .6);
+    transform: translateY(-4%);
+    position: absolute;
+    width: 104px;
+    top: 78px;
+    left: 0;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.ui-header-nav {
+    float: right;
+    justify-content: flex-start;
+    margin-right: 30px;
+    height: 70px;
+}
+
+.ui-header-nav dl dd h3 {
+    font-weight: normal;
+}
+
+.ui-header-nav dl dd {
+    color: #fff;
+    display: block;
+    line-height: 78px;
+    padding: 0 22px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+    font-weight: normal;
+    position: relative;
+    text-align: center;
+    float: left;
+    margin: 0px 50px;
+}
+
+.ui-header-nav dl dd ul li {
+    height: 35px;
+    line-height: 35px;
+}
+
+.ui-header-nav dl .on {
+    border-bottom: 2px solid transparent;
+    border-color: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.ui-header-nav dl dd ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.ui-header-nav dl dd ul li a:hover {
+    color: #00A2FF;
+}
+
+.ui-header-qq {
+    float: right;
+    margin-right: 30px;
+}
+
+.ui-header-qq a {
+    background: url(../images/qq.png) no-repeat left center;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    background-size: 30px;
+    margin-top: 21px;
+    height: 25px;
+}
+
+.ui-header-tel {
+    float: right;
+    margin-right: 30px;
+}
+
+@charset "utf-8"; @font-face {
+    font-family: "pmzdbt";
+    src: url("./pmzdbt.ttf");
+}
+
+.ui-header-tel a {
+    background: url(../images/tel.png) no-repeat left center;
+    background-size: 30px;
+    padding-left: 38px;
+    font-size: 20px;
+    font-family: "pmzdbt";
+    color: #fff;
+    cursor: initial;
+    display: block;
+    margin-top: 20px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.banner-bg {
+    background-image: url(../images/banner1.png);
+    width: 100%;
+    opacity: 1;
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    transition-duration: 0ms;
+}
+
+.banner-bg {
+    background-position: center;
+}
+
+
+.fixed{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 1);
+}
+#language{width: 60px;}

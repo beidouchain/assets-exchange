@@ -1,0 +1,6 @@
+com/beidou/exchange/mybatis/mbg/MBGRun.class
+com/beidou/exchange/datasource/DataBaseConfiguration.class
+com/beidou/exchange/mybatis/mbg/JavaTypeResolverDefaultImplExt.class
+com/beidou/exchange/base/entity/BaseEntity.class
+com/beidou/exchange/mybatis/mbg/JavaTypeResolverDefaultImplExt$JdbcTypeInformation.class
+com/beidou/exchange/mybatis/mbg/MapperPlugin.class
